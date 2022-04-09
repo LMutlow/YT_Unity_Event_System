@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float health = 100f;
 
-    private void TakeDamage(float damageTaken)
+    public void TakeDamage(float damageTaken)
     {
         health -= damageTaken;
         if(health <= 0)
@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
             // TODO: OnDeath
         }
 
+        Debug.Log("Player damaged " + damageTaken + " points, remaining health is " + health);
         // TODO: Update HP bar
     }
 }
